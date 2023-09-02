@@ -1,1 +1,1 @@
-# Result-Management-Website-using-Angular-Node-Fullstack
+# Result-Management-Application-using-Node.Js-And-Angular

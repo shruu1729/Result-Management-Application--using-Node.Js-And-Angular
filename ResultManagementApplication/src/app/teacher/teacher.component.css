@@ -1,0 +1,33 @@
+.logoutBtn{
+    font-family: cursive;
+    margin-top: 30px;
+    float:right;
+}
+.container-fluid{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    bottom: 10px;
+}
+table{
+    font-family: cursive;
+    border: black;
+}
+thead{
+	text-align:center;
+	background:lightseagreen;
+
+	}
+	tr{
+        text-align:center;
+	vertical-align:middle;
+	}
+	td{
+        text-align:center;
+	    vertical-align:middle;
+	}
+
+#alert{
+    text-align: center;
+}
+

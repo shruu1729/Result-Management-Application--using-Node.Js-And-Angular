@@ -1,0 +1,48 @@
+<div class="logoutBtn">
+     <!-- Button to navigate to the "add-record" route -->
+    <button class="btn btn-success" routerLink="/add-record" >Add new record </button>
+    &nbsp;&nbsp;
+     <!-- Button to trigger the logout method -->
+    <button class="btn btn-dark" (click)="logout()">Logout</button>
+    &nbsp;
+</div>
+<!-- Alert message displayed when errorMsg is true -->
+<div class="alert alert-danger" role="alert" *ngIf="errorMsg" id="alert"> 
+    Error deleting record, Try again!
+  </div>
+  <div class="container-fluid">
+    <!-- Table to display the records -->
+    <table class="table table-bordered table-hover table-striped" style="border: 10px;
+                                                                    width: 95%;
+                                                                    margin-left: auto;
+                                                                    margin-right: auto;
+                                                                    ">
+                                                                    
+        <thead>
+            <tr>
+                <th scope="col"><h5><b>Roll No.</b></h5></th>
+                <th scope="col"><h5><b>Name</b></h5></th>
+                <th scope="col"><h5><b>Date of Birth</b></h5></th>
+                <th scope="col"><h5><b>Score</b></h5></th>
+                <th scope="col"><h5><b>Actions</b></h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the readData array and display the record details -->
+            <tr *ngFor="let data of readData">
+                <td>{{data.roll_no}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.date_of_birth}}</td>
+                <td>{{data.score}}</td>
+                <td>
+                     <!-- Button to navigate to the "edit-record" route with the roll_no parameter -->
+                    <button  class="btn btn-primary" [routerLink]="['/edit-record',data.roll_no]"><i class="bi bi-pencil-square"></i></button>
+                    &nbsp;&nbsp;
+                    <!-- Button to trigger the deleteRecord method with the roll_no parameter -->
+                    <button  class="btn btn-danger"(click)="deleteRecord(data.roll_no)"><i class="bi bi-trash3"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

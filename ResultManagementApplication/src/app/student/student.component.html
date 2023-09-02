@@ -1,0 +1,65 @@
+<div class="logoutBtn">
+    <!-- Button to trigger the logout method -->
+<button class="btn btn-dark"  (click)="logout()">Logout</button>
+&nbsp;&nbsp;
+</div>
+<div class="container" id="title">
+    <h3>Search results here</h3>
+</div>
+<br>
+<div class="container">
+    <!-- Form for searching student records -->
+<form [formGroup]= "searchForm" id="searchForm" class="row row-cols-lg-auto g-3 align-items-center">
+    <div class="col-12">
+
+        <label for="roll_no">Roll No: 
+        <span class="required">*</span>
+        </label>
+        <div class="col-sm-12">
+             <!-- Input field for roll_no with number type -->
+        <input id="roll_no" type="number" matInput placeholder="Enter roll no."  formControlName="roll_no"  ></div>
+   </div>
+    <div class="col-12">
+
+        <label for="name" >Name: 
+            <span class="required">*</span>
+        </label>
+        <div class="col-sm-12">
+            <!-- Input field for name with text type -->
+        <input id="name" type="text" matInput placeholder="Enter name" formControlName="name" ></div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit" (click)="searchResult()"><i class="bi bi-search"></i></button>
+        &nbsp;
+        <button class="btn btn-danger" type="reset" ><i class="bi bi-x-lg"></i></button>
+    </div>
+</form></div>
+
+<div class="container">
+    <table class="table table-borderless mat-elevation-z8" *ngIf= "avail">
+        <tbody *ngFor="let data of readData">
+            <!-- Table to display the search results -->
+            <tr>
+                <th>Roll No.</th>
+                <td>:&nbsp;{{data.roll_no}}</td>
+            </tr>
+            <tr>
+                <th>Name </th>
+                <td>:&nbsp;{{data.name}}</td>
+            </tr>
+            <tr>
+                <th>Date of Birth </th>
+                <td>:&nbsp;{{data.date_of_birth}}</td>
+            </tr>
+            <tr>
+                <th>Score </th>
+                <td>:&nbsp;{{data.score}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <!-- Error message displayed when no records are found -->
+    <div class="container" *ngIf= "err" id="error">
+        <h3>No records found, Try again!!</h3>
+    </div>
+</div>

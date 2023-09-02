@@ -1,0 +1,55 @@
+#pageHeading{
+    font-family: cursive;
+    text-align:center;
+    padding: 10px;
+    background:lightseagreen;
+    color: ivory;
+}
+.logoutBtn{
+    font-family: cursive;
+    margin-top: 10px;
+    float:right;
+}
+
+.required{
+    color:red;
+    margin-left:5px;
+}
+.form-group-row{
+    font-family: cursive;
+    margin-top: 5px;
+}
+
+.row{
+font-family: cursive;
+margin-left:auto;
+margin-right:auto;
+}
+form{
+margin-top:100px;
+font-family: cursive;
+border: ridge;
+border-color: black;
+border-top-width: medium;
+background:white;}
+
+body{
+background:white;
+}
+#hello{
+background: lightseagreen;
+text-align: center;
+color: black;
+font-family: cursive;
+
+}
+
+footer{
+text-align: center;
+padding: 5px;
+background-color: lightseagreen;
+color: ivory;
+position:fixed;
+bottom: 0;
+width: 100%;
+}

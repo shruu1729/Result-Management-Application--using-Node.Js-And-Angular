@@ -1,0 +1,55 @@
+<div class="logoutBtn">
+  <button class="btn btn-dark" (click)="back()">Back</button>
+  &nbsp; &nbsp;
+  <button class="btn btn-dark"  (click)="logout()">Logout</button>
+  &nbsp;
+  </div>
+<div class="alert alert-danger" role="alert" *ngIf="errorMsg"> 
+    Error adding new record, Try again!
+  </div> 
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+	<form [formGroup]= "addForm" (ngSubmit)="addStudent()">
+	<div id="hello"><h2>Add Record</h2> <hr></div>
+	
+	<div class="form-group row">
+	<label for="uname" class="col-sm-5 col-form-label"><b>Roll No. :</b> 
+    <span class="required">*</span></label>
+    <div class="col-sm-6">
+      <input type="number" class="form-control" id="roll_no" formControlName="roll_no" required>
+      
+	</div>
+	</div>
+    <div class="form-group row">
+        <label for="uname" class="col-sm-5 col-form-label"><b>Name :</b> 
+          <span class="required">*</span></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" style="margin-top: 8px;" formControlName="name" required>
+        </div>
+        </div>
+        <div class="form-group row">
+            <label for="uname" class="col-sm-5 col-form-label"  > <b>Date-of-Birth : </b> 
+              <span class="required">*</span></label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="dob" style="margin-top: 8px;" formControlName="date_of_birth" placeholder="yyyy-mm-dd" required>
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="uname" class="col-sm-5 col-form-label"><b>Score :</b>
+                  <span class="required">*</span> </label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="score" style="margin-top: 8px;"formControlName="score" required>
+                </div>
+                </div>
+	
+   <div class="form-group row">
+     <div class="col-sm-6">
+      <button type="submit" class="btn btn-success" id="loginBtn" style="margin-top: 8px; margin-bottom:10px;">Save</button>
+      &nbsp;&nbsp;
+      <button type="reset" class="btn btn-danger" id="loginBtn" style="margin-top: 8px; margin-bottom:10px;">Clear</button>
+  
+    </div></div>
+    <div class="alert alert-danger" role="alert" *ngIf="invalidIp"> 
+      Invalid entry, Please check the input and try again!
+    </div> 
+	</form>
+</div>

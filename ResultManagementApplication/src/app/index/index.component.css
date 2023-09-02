@@ -1,0 +1,13 @@
+h4{
+    font-family: cursive;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.logins{
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
